@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Bogdan's Portfolio</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="all,follow" />
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <!-- Font Awesome CSS-->
+    <link
+      rel="stylesheet"
+      href="vendor/font-awesome/css/font-awesome.min.css"
+    />
+    <!-- Google fonts - Roboto + Roboto Slab-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,300"
+    />
+    <!-- owl carousel-->
+    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.css" />
+    <link
+      rel="stylesheet"
+      href="vendor/owl.carousel/assets/owl.theme.default.css"
+    />
+    <!-- animate.css-->
+    <link rel="stylesheet" href="vendor/animate.css/animate.css" />
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet" />
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css" />
+    <!-- Leaflet CSS - For the map-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css"
+    />
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script
+    ><![endif]-->
+  </head>
+  <body>
+    <!-- Reference item-->
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a href="#intro" class="navbar-brand scrollTo">BM</a>
+          <button
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarcollapse"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler navbar-toggler-right"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+          <div id="navbarcollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="#intro" class="nav-link link-scroll">Intro</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link link-scroll">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#references" class="nav-link link-scroll">My work</a>
+              </li>
+              <li class="nav-item">
+                <a href="#skills" class="nav-link link-scroll">My skills</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link link-scroll">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="/personal documents/resume.pdf"
+                  class="nav-link link-scroll"
+                  target="_blank"
+                  >Resume</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Intro Image-->
+    <section
+      id="intro"
+      style="background: url(img/home.jpg) center center no-repeat; background-size: cover;"
+      class="intro-section pb-2"
+    >
+      <div class="container py-5 my-5 index-forward">
+        <div class="row">
+          <div class="col-md-8 text-white">
+            <h2
+              data-animate="fadeInDown"
+              class="h4 text-primary font-weight-normal mb-0"
+            >
+              Hi, I am
+            </h2>
+            <h1 data-animate="fadeInDown" class="text-uppercase text-xl mb-0">
+              BOGDAN <span class="text-primary">MIHOCI</span>
+            </h1>
+            <h2 data-animate="slideInUp" class="h4 font-weight-normal mb-5">
+              Full Stack Developer
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About-->
+    <section id="about" class="about-section">
+      <div class="container">
+        <header class="text-center">
+          <h2 data-animate="fadeInDown" class="title">About me</h2>
+        </header>
+        <div class="row">
+          <div data-animate="fadeInUp" class="col-lg-12">
+            <p>
+              I am a full stack developer looking to improve my skills in
+              designing, documenting, testing and implementing new, custom
+              applications for commercial use. In my work, I continually aim to
+              go beyond expectations, participate and contribute to various
+              projects.
+            </p>
+            <p>
+              As an enthusiastic, passionate and motivated person, I am keen to
+              analyse complex requirements and to develop an in-depth
+              understanding of the company’s needs and objectives, by creating
+              solutions that add value and increase efficiency. I pride myself
+              in my ability to build an end to end user-friendly, secure and
+              robust web application and continuously optimise the code for
+              faster performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    __
+    <!--
+    *** REFERENCES IMAGE ***
+    _________________________________________________________
+    -->
+    <section id="references">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="mb-5 text-center">
+            <h2 data-animate="fadeInUp" class="title">My work</h2>
+          </div>
+          <div id="detail">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <span class="close">×</span>
+                <div id="detail-slider" class="owl-carousel owl-theme"></div>
+                <div class="text-center">
+                  <h1 id="detail-title" class="title"></h1>
+                </div>
+                <div id="detail-content"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Reference detail-->
+          <div id="references-masonry" data-animate="fadeInUp">
+            <div class="row">
+              <div class="reference-item col-lg-3 col-md-6">
+                <div class="reference">
+                  <a href="#"
+                    ><img src="img/progress.png" alt="" class="img-fluid" />
+                    <div class="overlay">
+                      <div class="inner">
+                        <h4 class="h4 reference-title">QMS Manager</h4>
+                        <p>Quality Management System</p>
+                      </div>
+                    </div></a
+                  >
+                  <div
+                    data-images="img/progress.png,img/cost.png,img/company-structure.png,img/products.png,img/profile.png,img/roles.png,img/non-details.png,
+                    img/defect-classification.png,img/checklist.png,img/five-whys.png,img/fishbone.png,img/internal1.png,img/internal2.png,
+                    img/customer1.png,img/notifications.png,img/after-sales.png,img/culpable.png,img/logs1.png,img/task.png,img/to-do.png,img/tasks.png,img/root-cause.png"
+                    class="sr-only reference-description"
+                  >
+                    <h5>Quality Management System (QMS)</h5>
+                    <p>
+                      A software solution that helps companies to easily manage
+                      aspects of your organization’s quality program. The
+                      application is a user-friendly, web-based software
+                      applications that manages, tracks and reports all the
+                      company's non-conformances in real-time. The application
+                      streamlines the complaint process, from client rejection
+                      through investigation, root cause analyses all the way to
+                      resolution.
+                    </p>
+                    <h5>Logs</h5>
+                    <p>
+                      Custom system designed for logging in all details of
+                      internal, supplier and customer non-conformances,
+                      implementing corrective actions allowing efficient case
+                      monitoring and providing a data analyses tool.
+                    </p>
+                    <h5>Root Cause Analysis</h5>
+                    <p>
+                      Report, track and react to defects and quality
+                      nonconformances within your operations. Launch
+                      investigations and find the root cause of the
+                      nonconformace using a variety of methodologies, including
+                      the process audit checklist, fishbone (Ishikawa) diagram
+                      and 5 WHY.
+                    </p>
+                    <h5>Costs</h5>
+                    <p>
+                      Keep track of all costs involved with each non-conformace,
+                      either internal or external.
+                    </p>
+                    <h5>Development</h5>
+                    <ol>
+                      <li>
+                        Front End:
+                        <ul>
+                          <li>
+                            <p>Javascript (ES6)</p>
+                          </li>
+                          <li>
+                            <p>HTML, CSS</p>
+                          </li>
+                          <li>
+                            <p>ReactJS (react hooks, redux)</p>
+                          </li>
+                          <li>
+                            <p>Typescript</p>
+                          </li>
+                          <li>
+                            <p>Testing:</p>
+                            <ul>
+                              <li>
+                                <p>UI unit tests (Jest)</p>
+                              </li>
+                              <li>
+                                <p>UI intergration tests (Protractor)</p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Back End:
+                        <ul>
+                          <li>
+                            <p>
+                              Java
+                              <li>
+                                <p>Spring Boot (REST API Framework)</p>
+                              </li>
+                              <li>
+                                <p>
+                                  Spring Security (authentication and
+                                  authorization - JWT)
+                                </p>
+                              </li>
+                              <li>
+                                <p>Testing:</p>
+                                <ul>
+                                  <li>
+                                    <p>Unit tests (JUnit 5)</p>
+                                  </li>
+                                  <li>
+                                    <p>
+                                      Integration tests (Spring Test Context
+                                      Framework)
+                                    </p>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <p>
+                                  Database (Hibernate/Spring data JPA + MySQL)
+                                </p>
+                              </li>
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ol>
+                    <h5>Used by:</h5>
+                    <!-- Contact-->
+                    <p class="buttons text-center">
+                      <a
+                        href="https://qms-manager.herokuapp.com/"
+                        class="btn btn-outline-primary"
+                        ><i class="fa fa-globe"></i> Live Demo</a
+                      ><a
+                        href="https://github.com/Streeam/CompanyInformationDatabase"
+                        class="btn btn-outline-primary"
+                        ><i class="fa fa-github"></i> Source Code</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="reference-item col-lg-3 col-md-6">
+                <div class="reference">
+                  <a href="#"
+                    ><img src="img/car-expenses-1.png" alt="" class="img-fluid" />
+                    <div class="overlay">
+                      <div class="inner">
+                        <h4 class="h5 reference-title">
+                          My Car Expenses
+                        </h4>
+                        <p>
+                          Web application that helps you compare your car expenses against other users cars
+                        </p>
+                      </div>
+                    </div></a
+                  >
+                  <div
+                    data-images="img/car-expenses-1.png,img/car-expenses-2.png,img/car-expenses-3.png"
+                    class="sr-only reference-description"
+                  >
+                    <p>
+                      Web application that helps you compare your car expenses against other users cars
+                    </p>
+                    <p>
+                      This app that allows users to log car expenses like fuel consumption and cost, service expenses, maintenance and road tax cost. This way users can have an overview of their car expenses over a period of time but also they can compare their expenses against other user’s car makes and models.
+                    </p>
+                    <h5>Development</h5>
+                    <ol>
+                      <li>
+                        Front End:
+                        <ul>
+                          <li>
+                            <p>Javascript (ES6)</p>
+                          </li>
+                          <li>
+                            <p>HTML, CSS</p>
+                          </li>
+                          <li>
+                            <p>ReactJS</p>
+                          </li>
+                          <li>
+                            <p>Typescript</p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Back End:
+                        <ul>
+                          <p>AWS Serverless Services</p>
+                            
+                              <li>
+                                <p>Lambda</p>
+                              </li>
+                              <li>
+                                <p>
+                                  API Gateway
+                                </p>
+                              </li>
+                              <li>
+                                <p>
+                                  DynamoDB
+                                </p>
+                              </li>
+                              <li>
+                                <p>
+                                  Cognito
+                                </p>
+                              </li>
+                        </ul>
+                      </li>
+                    </ol>
+                    <p class="buttons text-center">
+                      <a
+                        href="http://d2zuetj3ukjdr8.cloudfront.net/my-car-expenses/"
+                        class="btn btn-outline-primary"
+                        ><i class="fa fa-globe"></i> Live Demo</a
+                      ><a
+                        href="/"
+                        class="btn btn-outline-primary"
+                        ><i class="fa fa-github"></i> Source Code</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="reference-item col-lg-3 col-md-6">
+                <div class="reference">
+                  <a href="#"
+                    ><img src="img/project1-b.png" alt="" class="img-fluid" />
+                    <div class="overlay">
+                      <div class="inner">
+                        <h4 class="h5 reference-title">
+                          Company Information Database
+                        </h4>
+                        <p>
+                          An application that gives you the option to create
+                          your own company or join an existing one.
+                        </p>
+                      </div>
+                    </div></a
+                  >
+                  <div
+                    data-images="img/project1-a.png,img/project1-c.png,img/project1-d.png"
+                    class="sr-only reference-description"
+                  >
+                    <p>
+                      This is my first end-to-end full stack monolithic
+                      application. The backend server is build using Java and
+                      Spring Boot. For authorization and authentication, I used
+                      Spring Security along with JWT authentication. For storage
+                      I used PostgreSQL. The front-end application is be built
+                      using ReactJS and TypeScript.
+                    </p>
+                    <p>
+                      When a user first logs in, he is presented with two
+                      options. He can create his own company and become the
+                      manager of that company or he can request to join an
+                      existing company. If he creates his own company, he can
+                      invite existing users to join his company. He can also
+                      send emails to invite people who haven't yet registered to
+                      the application to sign up. When a user accepts an
+                      invitation, he becomes part of that company and is given
+                      the employee role. The manager can assign roles, he can
+                      hire or fire employee, he can send invitation and he can
+                      even dissolve the company. If the user decides to join a
+                      company, he can search through all companies and their
+                      internal structure. A user can request to join multiple
+                      companies, but he can only join one. Once the manager
+                      approves his request a notification is sent to him
+                      informing him that his request has been approved.
+                      Notifications are also sent to all the company's employees
+                      informing them that a new employee has join the company.
+                    </p>
+                    <p class="buttons text-center">
+                      <a
+                        href="https://company-information-database.herokuapp.com/"
+                        class="btn btn-outline-primary"
+                        ><i class="fa fa-globe"></i> Live Demo</a
+                      ><a
+                        href="https://github.com/Streeam/Purchase_Request"
+                        class="btn btn-outline-primary"
+                        ><i class="fa fa-github"></i> Source Code</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills-->
+
+    <section id="skills">
+      <div class="container">
+        <div class="col-sm-12">
+          <div class="mb-5 text-center">
+            <h2 data-animate="fadeInUp" class="title">My Skills</h2>
+          </div>
+          <div id="detail">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <span class="close">×</span>
+                <div id="detail-slider" class="owl-carousel owl-theme"></div>
+                <div class="text-center">
+                  <h1 id="detail-title" class="title"></h1>
+                </div>
+                <div id="detail-content"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Skills detail-->
+          <div id="skills-masonry" data-animate="fadeInUp">
+            <div class="row">
+              <div class="skill-item col-lg-3 col-md-6">
+                <div class="skill">
+                  <div>
+                    <img src="img/frontend.PNG" alt="" class="img-fluid" />
+                    <div class="overlay">
+                      <div class="inner">
+                        <p>HTML5</p>
+                        <p>CSS</p>
+                        <p>JavaScript</p>
+                        <p>ReactJS/React Native</p>
+                        <p>TypeScript</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item col-lg-3 col-md-6">
+                <div class="skill">
+                  <div>
+                    <img src="img/Server.PNG" alt="" class="img-fluid" />
+                    <div class="overlay">
+                      <div class="inner">
+                        <p>Golang</p>
+                        <p>Java</p>
+                        <p>GraphQL</p>
+                        <p>GRPC</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item col-lg-3 col-md-6">
+                <div class="skill">
+                  <div>
+                    <img src="img/database.PNG" alt="" class="img-fluid" />
+                    <div class="overlay">
+                      <div class="inner">
+                        <p>MySQL</p>
+                        <p>PostgreSQL</p>
+                        <p>MongoDB</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item col-lg-3 col-md-6">
+                <div class="skill">
+                  <div>
+                    <img src="img/deployment.PNG" alt="" class="img-fluid" />
+                    <div class="overlay">
+                      <div class="inner">
+                        <p>AWS</p>
+                        <p>Docker Swarm</p>
+                        <p>Git</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact-->
+    <section
+      id="contact"
+      data-animate="bounceIn"
+      class="contact-section contact"
+    >
+      <div class="container">
+        <header class="text-center">
+          <h2 class="title">Contact me</h2>
+        </header>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <form id="contact-form" action="#">
+              <div class="messages"></div>
+              <div class="controls">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      name="name"
+                      id="firstName"
+                      placeholder="Your firstname *"
+                      required="required"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      name="surname"
+                      id="lastName"
+                      placeholder="Your lastname *"
+                      required="required"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      name="email"
+                      id="email"
+                      placeholder="Your email *"
+                      required="required"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      name="phone"
+                      id="phone"
+                      placeholder="Your phone"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <textarea
+                      name="message"
+                      id="message"
+                      placeholder="Message for me *"
+                      rows="4"
+                      required="required"
+                      class="form-control"
+                    ></textarea>
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <button
+                      id="submit-button"
+                      type="button"
+                      class="btn btn-outline-primary"
+                    >
+                      Send message
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Map-->
+    <div id="map"></div>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-lg-left">
+            <p class="social">
+              <a
+                href="https://linkedin.com/in/bogdan-mihoci-729561188"
+                class="external linkedin wow fadeInUp"
+                ><i class="fa fa-linkedin"></i></a
+              ><a
+                href="https://github.com/Streeam"
+                data-wow-delay="0.2s"
+                class="external github wow fadeInUp"
+                ><i class="fa fa-github"></i></a
+              ><a
+                href="mailto: bogdanmihoci27@gmail.com"
+                data-wow-delay="0.6s"
+                class="email wow fadeInUp"
+                ><i class="fa fa-envelope"></i
+              ></a>
+            </p>
+          </div>
+          <!-- /.6-->
+          <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+            <p>© 2020 Bogdan Mihoci. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"></script>
+    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="vendor/jquery.counterup/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+    <script src="js/front.js"></script>
+  </body>
+</html>
